@@ -7,32 +7,43 @@
     android:layout_height="match_parent"
     tools:context=".AddPullActivity">
 
+    <TextView
+        android:id="@+id/beanLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Beans:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/grindLabel"
+        app:layout_constraintTop_toBottomOf="@+id/shotTitle" />
+
     <include
         android:id="@+id/addPullToolbar"
         layout="@layout/add_pull_toolbar" />
 
     <EditText
         android:id="@+id/yieldInput"
-        android:layout_width="48dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="-8dp"
+        android:layout_marginStart="8dp"
         android:ems="4"
         android:inputType="numberDecimal"
         android:maxEms="4"
         android:minEms="4"
         app:layout_constraintBottom_toBottomOf="@+id/yieldLabel"
-        app:layout_constraintEnd_toEndOf="@+id/doseInput" />
+        app:layout_constraintEnd_toEndOf="@+id/doseInput"
+        app:layout_constraintStart_toEndOf="@+id/yieldLabel"
+        app:layout_constraintTop_toTopOf="@+id/yieldLabel" />
 
     <TextView
         android:id="@+id/grindLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
         android:text="Grind Size:"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toStartOf="@+id/grindInput"
-        app:layout_constraintTop_toBottomOf="@+id/shotTitle" />
+        app:layout_constraintEnd_toEndOf="@+id/doseLabel"
+        app:layout_constraintTop_toBottomOf="@+id/beanLabel" />
 
     <TextView
         android:id="@+id/doseLabel"
@@ -41,20 +52,22 @@
         android:layout_marginTop="16dp"
         android:text="Dose (g):"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="@+id/grindLabel"
+        app:layout_constraintEnd_toEndOf="@+id/yieldLabel"
         app:layout_constraintTop_toBottomOf="@+id/grindLabel" />
 
     <EditText
         android:id="@+id/doseInput"
-        android:layout_width="48dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="-8dp"
+        android:layout_marginStart="8dp"
         android:ems="4"
         android:inputType="numberDecimal"
         android:maxEms="4"
         android:minEms="4"
         app:layout_constraintBottom_toBottomOf="@+id/doseLabel"
         app:layout_constraintEnd_toEndOf="@+id/grindInput"
+        app:layout_constraintStart_toEndOf="@+id/doseLabel"
+        app:layout_constraintTop_toTopOf="@+id/doseLabel"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
@@ -64,17 +77,18 @@
         android:layout_marginTop="16dp"
         android:text="Yield (g):"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="@+id/grindLabel"
+        app:layout_constraintEnd_toEndOf="@+id/preinfusionLabel"
         app:layout_constraintTop_toBottomOf="@+id/doseLabel" />
 
     <TextView
         android:id="@+id/timeLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="Total Time (s):"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="@+id/grindLabel"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/preinfusionLabel" />
 
     <TextView
@@ -84,52 +98,59 @@
         android:layout_marginTop="16dp"
         android:text="PreInfuse (s):"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="@+id/grindLabel"
+        app:layout_constraintEnd_toEndOf="@+id/timeLabel"
         app:layout_constraintTop_toBottomOf="@+id/yieldLabel" />
 
     <EditText
         android:id="@+id/timeInput"
-        android:layout_width="48dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="-8dp"
+        android:layout_marginStart="8dp"
         android:ems="4"
         android:inputType="numberDecimal"
         android:maxEms="4"
         android:minEms="4"
         app:layout_constraintBottom_toBottomOf="@+id/timeLabel"
-        app:layout_constraintEnd_toEndOf="@+id/preinfusionInput" />
+        app:layout_constraintEnd_toEndOf="@+id/preinfusionInput"
+        app:layout_constraintStart_toEndOf="@+id/timeLabel"
+        app:layout_constraintTop_toTopOf="@+id/timeLabel" />
 
     <EditText
         android:id="@+id/preinfusionInput"
-        android:layout_width="48dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="-8dp"
+        android:layout_marginStart="8dp"
         android:ems="4"
         android:inputType="numberDecimal"
         android:maxEms="4"
         android:minEms="4"
         app:layout_constraintBottom_toBottomOf="@+id/preinfusionLabel"
-        app:layout_constraintEnd_toEndOf="@+id/yieldInput" />
+        app:layout_constraintEnd_toEndOf="@+id/yieldInput"
+        app:layout_constraintStart_toEndOf="@+id/preinfusionLabel"
+        app:layout_constraintTop_toTopOf="@+id/preinfusionLabel" />
 
     <EditText
         android:id="@+id/grindInput"
-        android:layout_width="48dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="-8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="48dp"
         android:ems="4"
         android:inputType="numberDecimal"
         android:maxEms="4"
         android:minEms="4"
+        android:singleLine="false"
         app:layout_constraintBottom_toBottomOf="@+id/grindLabel"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/grindLabel"
+        app:layout_constraintTop_toTopOf="@+id/grindLabel" />
 
     <TextView
         android:id="@+id/shotNotesLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="48dp"
         android:text="Notes:"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toStartOf="parent"
@@ -159,11 +180,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Favorite"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/ratingSeekBar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.822"
+        app:layout_constraintHorizontal_bias="0.632"
         app:layout_constraintStart_toEndOf="@+id/ratingDisplay"
-        app:layout_constraintTop_toBottomOf="@+id/shotNotesInput" />
+        app:layout_constraintTop_toTopOf="@+id/ratingSeekBar" />
 
     <TextView
         android:id="@+id/ratingLabel"
@@ -172,21 +193,21 @@
         android:layout_marginStart="8dp"
         android:text="Rating:"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/ratingSeekBar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/shotNotesInput" />
+        app:layout_constraintTop_toTopOf="@+id/ratingSeekBar" />
 
     <SeekBar
         android:id="@+id/ratingSeekBar"
-        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        style="@android:style/Widget.Material.SeekBar"
         android:layout_width="160dp"
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
         android:max="10"
         android:progress="5"
-        app:layout_constraintBottom_toBottomOf="@+id/ratingLabel"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ratingLabel"
-        app:layout_constraintTop_toTopOf="@+id/ratingLabel"
+        app:layout_constraintTop_toBottomOf="@+id/shotNotesInput"
         app:layout_constraintVertical_bias="0.518" />
 
     <TextView
@@ -195,47 +216,34 @@
         android:layout_height="wrap_content"
         android:text="5"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/ratingSeekBar"
         app:layout_constraintStart_toEndOf="@+id/ratingSeekBar"
-        app:layout_constraintTop_toBottomOf="@+id/shotNotesInput"
+        app:layout_constraintTop_toTopOf="@+id/ratingSeekBar"
         tools:text="5" />
-
-    <Spinner
-        android:id="@+id/beansDropdownMenu"
-        android:layout_width="136dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="8dp"
-        android:spinnerMode="dropdown"
-        app:layout_constraintBottom_toBottomOf="@+id/timeLabel"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/dateAndTime"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="-8dp"
-        android:ems="10"
-        android:hint="Date/Time"
-        android:inputType="datetime"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toTopOf="@+id/yieldLabel"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/shotTitle"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="128dp"
         android:ems="10"
         android:hint="Title..."
         android:inputType="text"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addPullToolbar" />
+
+    <Spinner
+        android:id="@+id/beanSpinner"
+        style="@android:style/Widget.Material.Spinner.Underlined"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="@+id/beanLabel"
+        app:layout_constraintEnd_toEndOf="@+id/grindInput"
+        app:layout_constraintStart_toEndOf="@+id/beanLabel"
+        app:layout_constraintTop_toTopOf="@+id/beanLabel" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
