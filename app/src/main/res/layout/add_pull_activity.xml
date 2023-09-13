@@ -7,6 +7,10 @@
     android:layout_height="match_parent"
     tools:context=".AddPullActivity">
 
+    <include
+        android:id="@+id/addPullToolbar"
+        layout="@layout/add_pull_toolbar" />
+
     <EditText
         android:id="@+id/yieldInput"
         android:layout_width="48dp"
@@ -174,9 +178,12 @@
 
     <SeekBar
         android:id="@+id/ratingSeekBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="160dp"
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
+        android:max="10"
+        android:progress="5"
         app:layout_constraintBottom_toBottomOf="@+id/ratingLabel"
         app:layout_constraintStart_toEndOf="@+id/ratingLabel"
         app:layout_constraintTop_toTopOf="@+id/ratingLabel"
@@ -186,11 +193,12 @@
         android:id="@+id/ratingDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="0"
+        android:text="5"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ratingSeekBar"
-        app:layout_constraintTop_toBottomOf="@+id/shotNotesInput" />
+        app:layout_constraintTop_toBottomOf="@+id/shotNotesInput"
+        tools:text="5" />
 
     <Spinner
         android:id="@+id/beansDropdownMenu"
@@ -202,7 +210,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/dateAndTime"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -219,14 +227,15 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="128dp"
         android:ems="10"
         android:hint="Title..."
         android:inputType="text"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/addPullToolbar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
