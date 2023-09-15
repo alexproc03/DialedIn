@@ -1,4 +1,4 @@
-package com.example.dialedin
+package com.example.dialedin.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter
 import android.widget.SeekBar
 import android.widget.Spinner
 import android.widget.TextView
+import com.example.dialedin.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
@@ -44,7 +45,7 @@ class AddPullActivity : AppCompatActivity() {
 
         //spinner dummy code
         val spinner: Spinner = findViewById(R.id.beanSpinner)
-// Create an ArrayAdapter using the string array and a default spinner layout
+        // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter.createFromResource(
             this,
             R.array.roast_array,

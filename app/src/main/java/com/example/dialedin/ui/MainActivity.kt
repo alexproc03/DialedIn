@@ -1,8 +1,11 @@
-package com.example.dialedin
+package com.example.dialedin.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.compose.foundation.lazy.LazyItemScope
+import com.example.dialedin.R
+
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
@@ -23,6 +26,5 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, AddPullActivity::class.java)
             startActivity(intent)
         }
-
     }
 }
