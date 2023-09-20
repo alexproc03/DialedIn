@@ -5,7 +5,7 @@
     android:id="@+id/addPullScreen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.AddPullActivity">
+    tools:context="com.alexprosd.dialedin.ui.AddPullActivity">
 
     <TextView
         android:id="@+id/beanLabel"
