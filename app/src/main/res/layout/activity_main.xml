@@ -8,19 +8,20 @@
     tools:context="com.alexprosd.dialedin.ui.MainActivity">
 
     <!-- RecyclerView for displaying notes -->
-
-    <!--Add button -->
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/shotRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="798dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/mainToolbar"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="3dp"
         android:layout_marginBottom="-3dp"
         android:padding="16dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/gallery_item_layout"/>
+
+
+    <!--Add button -->
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addShotButton"
@@ -46,36 +47,4 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/dataOutput"
-        android:layout_width="196dp"
-        android:layout_height="177dp"
-        android:layout_alignBottom="@+id/idInput"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="98dp"
-        android:layout_marginEnd="117dp"
-        android:layout_marginBottom="-199dp" />
-
-    <EditText
-        android:id="@+id/idInput"
-        android:layout_width="85dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="228dp"
-        android:layout_marginBottom="435dp"
-        android:ems="10"
-        android:hint="id"
-        android:inputType="text" />
-
-    <Button
-        android:id="@+id/lookUpButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/idInput"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="118dp"
-        android:layout_marginBottom="-46dp"
-        android:text="Look Up" />
 </RelativeLayout>
