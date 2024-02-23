@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="crema_light">#FFA726</color>
+    <color name="crema">#92FFAB00</color>
+    <color name="crema_dark">#57FF6D00</color>
+    <color name="teal_200">#FFF492</color>
+    <color name="teal_700">#FFFBD8</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="dark_grey">#121212</color>
 </resources>

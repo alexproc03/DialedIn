@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:clickable="true">
+
+    <!-- Row for Title -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title:"
+            android:textSize="14sp"></TextView>
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Placeholder Title"
+            android:textSize="16sp"
+            android:layout_marginStart="4dp" />
+    </LinearLayout>
+
+    <!-- Row for Bean -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bean:"
+            android:textSize="14sp"></TextView>
+
+        <TextView
+            android:id="@+id/beanTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Placeholder Bean"
+            android:textSize="14sp"
+            android:textColor= "@color/crema_light"
+            android:layout_marginStart="4dp" />
+    </LinearLayout>
+    <!-- Row for Grind -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grind:"
+            android:textSize="14sp"></TextView>
+
+        <TextView
+            android:id="@+id/grindTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="placeholder"
+            android:textSize="14sp"
+            android:layout_marginStart="4dp" />
+    </LinearLayout>
+
+    <!-- Row for Dose -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dose:"
+            android:textSize="14sp"></TextView>
+
+        <TextView
+            android:id="@+id/doseTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="placeholder"
+            android:textSize="14sp"
+            android:layout_marginStart="4dp" />
+    </LinearLayout>
+
+    <!-- Row for Yield -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yield:"
+            android:textSize="14sp"></TextView>
+
+        <TextView
+            android:id="@+id/yieldTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="placeholder"
+            android:textSize="14sp"
+            android:layout_marginStart="4dp" />
+    </LinearLayout>
+    <!-- Row for Preinfuse -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PreInfuse:"
+            android:textSize="14sp"></TextView>
+
+        <TextView
+            android:id="@+id/preinfuseTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="placeholder"
+            android:textSize="14sp"
+            android:layout_marginStart="4dp" />
+    </LinearLayout>
+    <!-- Row for time -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time:"
+            android:textSize="14sp"></TextView>
+
+        <TextView
+            android:id="@+id/timeTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="placeholder"
+            android:textSize="14sp"
+            android:layout_marginStart="4dp" />
+    </LinearLayout>
+    <!-- Row for Rating -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yield:"
+            android:textSize="14sp"></TextView>
+
+        <TextView
+            android:id="@+id/ratingTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="placeholder"
+            android:textSize="14sp"
+            android:layout_marginStart="4dp" />
+    </LinearLayout>
+</LinearLayout>

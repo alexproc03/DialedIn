@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">DialedIn</string>
+    <string-array name="roast_array">
+        <item>Light</item>
+        <item>Medium</item>
+        <item>Dark</item>
+    </string-array>
 </resources>
