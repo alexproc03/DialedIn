@@ -4,6 +4,9 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.migration.Migration
+import androidx.sqlite.db.SupportSQLiteDatabase
+import kotlinx.coroutines.CoroutineScope
 
 @Database(entities = [Entry :: class], version = 1)
 abstract class EntryDatabase :RoomDatabase() {
@@ -15,13 +18,11 @@ abstract class EntryDatabase :RoomDatabase() {
         private var INSTANCE: EntryDatabase? = null
 
         fun getDatabase(context: Context): EntryDatabase {
-
             val tempInstance = INSTANCE
             if (tempInstance != null) {
                 return tempInstance
             }
             synchronized(this) {
-
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     EntryDatabase::class.java,
@@ -29,7 +30,6 @@ abstract class EntryDatabase :RoomDatabase() {
                 ).build()
                 INSTANCE = instance
                 return instance
-
             }
         }
     }

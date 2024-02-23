@@ -4,8 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.alexprosd.dialedin.entrydata.EntryDao
 import com.example.dialedin.R
 import com.example.dialedin.databinding.ActivityMainBinding
 import com.alexprosd.dialedin.entrydata.EntryDatabase
@@ -27,14 +27,22 @@ class MainActivity : AppCompatActivity() {
         entryDb = EntryDatabase.getDatabase(this)
 
         val shotRecyclerView : RecyclerView = binding.shotRecyclerView
+        shotRecyclerView.layoutManager = LinearLayoutManager(this)
         lifecycleScope.launch(Dispatchers.Main) {
             val entries = withContext(Dispatchers.IO) {
                 entryDb.EntryDao().getAll()
             }
             shotRecyclerView.adapter = RecyclerAdapter(entries)
+
         }
 
-
+        lifecycleScope.launch(Dispatchers.Main) {
+            val entries = withContext(Dispatchers.IO) {
+                entryDb.EntryDao().getAll()
+            }
+            val adapter = RecyclerAdapter(entries)
+            shotRecyclerView.adapter = adapter
+        }
         //mainToolbar functionality
         val mainToolbar: androidx.appcompat.widget.Toolbar = findViewById(R.id.mainToolbar)
         setSupportActionBar(mainToolbar)
@@ -46,4 +54,5 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
 }

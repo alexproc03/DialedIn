@@ -175,17 +175,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/shotNotesLabel" />
 
-    <CheckBox
-        android:id="@+id/favoriteShotCheckBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Favorite"
-        app:layout_constraintBottom_toBottomOf="@+id/ratingSeekBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.632"
-        app:layout_constraintStart_toEndOf="@+id/ratingDisplay"
-        app:layout_constraintTop_toTopOf="@+id/ratingSeekBar" />
-
     <TextView
         android:id="@+id/ratingLabel"
         android:layout_width="wrap_content"

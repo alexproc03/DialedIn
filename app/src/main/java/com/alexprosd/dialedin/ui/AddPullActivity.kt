@@ -22,6 +22,8 @@ class AddPullActivity : AppCompatActivity() {
     private lateinit var binding: AddPullActivityBinding
     private lateinit var entryDb : EntryDatabase
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = AddPullActivityBinding.inflate(layoutInflater)
@@ -65,6 +67,7 @@ class AddPullActivity : AppCompatActivity() {
 
     }
 
+
     private fun writeData() {
 
         val title: String = binding.shotTitle.text.toString()
@@ -76,7 +79,7 @@ class AddPullActivity : AppCompatActivity() {
         val time: String = binding.timeInput.text.toString()
         val notes: String = binding.shotNotesInput.text.toString()
         val rating: Int = binding.ratingSeekBar.progress
-        val favorite: Boolean = binding.favoriteShotCheckBox.isActivated
+        var favorite: Boolean = false
 
         if (title.isNotEmpty() && grindSize.isNotEmpty() && dose.isNotEmpty() && yield.isNotEmpty() && preInfuse.isNotEmpty() && time.isNotEmpty() && notes.isNotEmpty()) {
             val entry = Entry(
